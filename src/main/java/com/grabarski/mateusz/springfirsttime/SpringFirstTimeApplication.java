@@ -1,6 +1,7 @@
 package com.grabarski.mateusz.springfirsttime;
 
 import com.grabarski.mateusz.springfirsttime.controllers.ConstructorMyController;
+import com.grabarski.mateusz.springfirsttime.controllers.PrimaryController;
 import com.grabarski.mateusz.springfirsttime.controllers.SetterMyController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,5 +18,8 @@ public class SpringFirstTimeApplication {
 
         SetterMyController setterMyController = applicationContext.getBean(SetterMyController.class);
         setterMyController.printMessage();
+
+        PrimaryController primaryController = applicationContext.getBean(PrimaryController.class);
+        primaryController.printMessage();
     }
 }
