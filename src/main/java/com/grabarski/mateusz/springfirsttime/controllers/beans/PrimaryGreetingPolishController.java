@@ -6,12 +6,11 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("pl")
 @Primary
-@Profile("en")
-public class PrimaryGreetingService implements GreetingService {
-
+public class PrimaryGreetingPolishController implements GreetingService {
     @Override
     public String provideMessage() {
-        return "Hello - primary service";
+        return "Siema - to jest pl";
     }
 }
